@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+//Esto fué lo que yo edite Diego Juan Marin
 
 namespace Dominio
 {

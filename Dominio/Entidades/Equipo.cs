@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+
 namespace Dominio{
     public class Equipo{
         public int Id {get;set;}
@@ -9,7 +10,7 @@ namespace Dominio{
         public int Jugadores {get;set;}
         public int PatrocinadorId {get;set;}
         //Llave foranea
-        public List<TorneoEquipo> TorneoEquipos {get;set;}
+        public List<TorneoEquipo> TorneosEquipo {get;set;}
         public List<Deportista> Deportistas {get;set;}
     }
 }

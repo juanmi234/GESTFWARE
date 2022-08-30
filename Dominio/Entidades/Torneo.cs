@@ -32,13 +32,17 @@ namespace Dominio{
         //Requerimientos para el campo CantidadEquipos
         [Required(ErrorMessage="Este campo es obligatorio")]
         public int CantidadEquipos {get;set;}
+        
+        //Requerimientos para el campo Etapa
         public string Etapa {get;set;}
-        public int MunicipioId {get;set;}
-        //Llave foranea
-        public int PatrocinadorId {get;set;}
-        //Llave foranea
+        
+        ////Llaves foraneas
+        public int MunicipioId {get;set;}//Llave foranea
+        public int PatrocinadorId {get;set;}//Llave foranea
         public List<Arbitro> Arbitros {get;set;}
-        //public List<TorneoEquipo> TorneoEquipos {get;set;}
+        
+        //public List<TorneoEquipo> TorneoEquipos {get;set;} //este se quitará cuando podamos hacer la relación muchos a muchos
+        
         public List<UnidadDeportiva> UnidadesDeportivas {get;set;}
     }
 }

@@ -25,7 +25,7 @@ namespace Dominio{
         public string Ciudad {get;set;}
 
         //Llaves foraneas
-        public int TorneoId {get;set;}//Puede ser nulo
+        public int? TorneoId {get;set;}//Puede ser nulo
         //Llave foranea
         public List<Escenario> Escenarios {get;set;}
 

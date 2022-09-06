@@ -40,6 +40,6 @@ namespace Dominio{
         public string Licencia {get;set;}
 
         //Relaciones
-        public List<Arbitro> Arbitros {get;set;}
+        public List<Arbitro> Arbitros {get;set;}=new List<Arbitro>();
     }
 }

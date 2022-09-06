@@ -20,6 +20,8 @@ namespace Dominio{
         [MaxLength(20, ErrorMessage="El campo {0} debe ser máximo de {1} caracteres")]
         [MinLength(5, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
         public string Tipo {get;set;}
+        
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int UnidadDeportivaId {get;set;}
     }
 }

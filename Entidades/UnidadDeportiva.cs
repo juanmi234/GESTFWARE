@@ -22,6 +22,8 @@ namespace Dominio{
         [MinLength(5, ErrorMessage="El campo {0} debe tener máximo {1} caracteres")]
         public string Ciudad {get;set;}
         public List<Escenario> Escenarios {get;set;}
+        
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int TorneoId {get;set;}
 
     }

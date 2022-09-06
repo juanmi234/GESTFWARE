@@ -22,8 +22,8 @@ namespace Dominio{
         [Range(0, 1000000000,ErrorMessage="Ingrese un valor correcto")]
         
         public int Jugadores {get;set;}
-
-
+        
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int PatrocinadorId {get;set;}
 
 

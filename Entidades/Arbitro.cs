@@ -42,10 +42,10 @@ namespace Dominio{
         [RegularExpression("([0-9]+)", ErrorMessage="El campo {0} solo acepta valores numericos")]
         public string Celular {get;set;}
 
-
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int ColegioId {get;set;}
 
-
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int TorneoId {get;set;}
 
     }

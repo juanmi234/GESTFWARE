@@ -52,7 +52,10 @@ namespace Persistencia{
                     deportista.Celular=depor.Celular;
                     deportista.Correo=depor.Correo;
                     deportista.EquipoId=depor.EquipoId;
-                    this.appContext.SaveChanges();
+                    //if(!Existencia(deportista)){
+                        this.appContext.SaveChanges();
+                        return true;
+                    //}
                 }
                 catch (System.Exception)
                 {
@@ -91,7 +94,8 @@ namespace Persistencia{
         //Validar existencia
         private bool Existencia(Deportista depor){
             deportista=this.appContext.Deportistas.FirstOrDefault(
-                        d=>d.Id==depor.Id);
+                        d=>d.Documento==depor.Documento);
+                        
             if(deportista!=null){
                 //El deportista si existe
                 return true;

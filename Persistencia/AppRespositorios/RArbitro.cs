@@ -41,8 +41,29 @@ namespace Persistencia{
 
         //Modificat Arbitro
         public bool ModificarArbitro(Arbitro arbitro){
-            //Aún falta por hacer
-            return true;
+            arbi=this.appContext.Arbitros.Find(arbitro.Id);
+            if(arbi!=null){
+                try
+                {
+                    arbi.Documento=arbitro.Documento;
+                    arbi.Nombres=arbitro.Nombres;
+                    arbi.Apellidos=arbitro.Apellidos;
+                    arbi.Deporte=arbitro.Deporte;
+                    arbi.Rh=arbitro.Rh;
+                    arbi.Celular=arbitro.Celular;
+                    arbi.ColegioInstruccionId=arbitro.ColegioInstruccionId;
+                    arbi.TorneoId=arbitro.TorneoId;
+                    //if(!Existencia(arbi)){
+                        this.appContext.SaveChanges();
+                        return true;
+                    //}
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
+            }
+            return false;
         }
 
         //Eliminar Arbitro
@@ -76,7 +97,7 @@ namespace Persistencia{
         //Verificar si ya existe un arbitro
         private bool Existencia(Arbitro arbitro){
             arbi = this.appContext.Arbitros.FirstOrDefault(
-                    a=>a.Id==arbitro.Id);
+                    a=>a.Documento==arbitro.Documento);
             if(arbi!=null){
                 //Si es diferente de null, o sea lleno, si existe tal arbitro
                 return true;

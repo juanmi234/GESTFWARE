@@ -50,8 +50,10 @@ namespace Persistencia{
                     entrenador.Celular=trenador.Celular;
                     entrenador.Correo=trenador.Correo;
                     entrenador.EquipoId=trenador.EquipoId;
-                    this.appContext.SaveChanges();
-                    return true;
+                    //if(!Existencia(entrenador)){
+                        this.appContext.SaveChanges();
+                        return true;
+                    //}
                 }
                 catch (System.Exception)
                 {
@@ -86,7 +88,9 @@ namespace Persistencia{
 
         //Validaciones
         private bool Existencia(Entrenador trenador){
-            entrenador=this.appContext.Entrenadores.FirstOrDefault(e=>e.Documento==trenador.Documento);
+            entrenador=this.appContext.Entrenadores.FirstOrDefault(
+                e=>e.Documento==trenador.Documento);
+                
             if(entrenador!=null){
                 //El entrenador ya existe
                 return true;

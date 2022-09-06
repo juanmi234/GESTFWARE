@@ -25,6 +25,7 @@ namespace Persistencia
                     return false;
                 }
             }
+            //Sino, ya hay un torneo con mismo nombre
             return false;
         }
         public Torneo BuscarTorneo(int id){
@@ -60,8 +61,10 @@ namespace Persistencia
                     //torneo.Arbitros=torn.Arbitros;
                     //torneo.UnidadesDeportivas=torn.UnidadesDeportivas;
                     //torneo.TorneoEquipos=torn.TorneoEquipos;
-                    this.appContext.SaveChanges();
-                    return true;
+                    if(!Existe(torneo)){
+                        this.appContext.SaveChanges();
+                        return true;
+                    }
                 }
                 catch (System.Exception)
                 {
@@ -78,7 +81,9 @@ namespace Persistencia
         }
 
         private bool Existe(Torneo torn){
-            torneo=this.appContext.Torneos.FirstOrDefault(t=>t.Nombre==torn.Nombre );
+            torneo=this.appContext.Torneos.FirstOrDefault(
+                t=>t.Nombre==torn.Nombre);
+                
             if(torneo!=null){
                 //El torneo ya existe
                 return true;

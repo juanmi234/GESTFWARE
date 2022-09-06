@@ -16,28 +16,49 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Colegio
         public bool CrearColegio(ColegioInstruccion cole){
-            try
-            {
-                this.appContext.ColegiosInstrucciones.Add(cole);
-                this.appContext.SaveChanges();
-                return true;
+            if(!Existencia(cole)){
+                try
+                {
+                    this.appContext.ColegiosInstrucciones.Add(cole);
+                    this.appContext.SaveChanges();
+                    return true;
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
             }
-            catch (System.Exception)
-            {
-                return false;
-            }
+            return false;
         }
 
         //Buscar Colegio
         public ColegioInstruccion BuscarColegio(string Nit){
-            colegio=this.appContext.ColegiosInstrucciones.Find(Nit);
-            //No estoy seguro
-            return colegio; 
+            return colegio=this.appContext.ColegiosInstrucciones.Find(Nit);
         }
 
         //Modificar Colegio
         public bool ModificarColegio(ColegioInstruccion col){
-            //Aún falta por hacer
+            colegio=this.appContext.ColegiosInstrucciones.Find(col.Id);
+            if(colegio!=null){
+                try
+                {
+                    colegio.Nit=col.Nit;
+                    colegio.RazonSocial=col.RazonSocial;
+                    colegio.Direccion=col.Direccion;
+                    colegio.Licencia=col.Licencia;
+                    colegio.Deporte=col.Deporte;
+                    colegio.Telefono=col.Telefono;
+                    //colegio.Arbitros=col.Arbitros;
+                    if(!Existencia(colegio)){
+                        this.appContext.SaveChanges();
+                        return true;
+                    }
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
+            }
             return false;
         }
 
@@ -67,6 +88,18 @@ namespace Persistencia{
         //Listar Colegios con IEnumerable
         public IEnumerable<ColegioInstruccion> ListarColegiosIE(){
             return this.appContext.ColegiosInstrucciones;
+        }
+
+        //Validaciones
+        private bool Existencia(ColegioInstruccion col){
+            colegio=this.appContext.ColegiosInstrucciones.FirstOrDefault(
+                c=>c.RazonSocial==col.RazonSocial);
+
+            if(colegio!=null){
+                //Si existe
+                return true;
+            }
+            return false;
         }
 
     }

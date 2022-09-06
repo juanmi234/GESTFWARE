@@ -58,7 +58,7 @@ namespace Dominio{
         [MinLength(5, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
         public string Correo {get;set;}
 
-
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int EquipoId {get;set;}
     }
 }

@@ -41,8 +41,27 @@ namespace Persistencia{
 
         //Modificat Arbitro
         public bool ModificarArbitro(Arbitro arbitro){
-            //Aún falta por hacer
-            return true;
+            arbi=this.appContext.Arbitros.Find(arbitro.Id);
+            if(arbi!=null){
+                try
+                {
+                    arbi.Documento=arbitro.Documento;
+                    arbi.Nombres=arbitro.Nombres;
+                    arbi.Apellidos=arbitro.Apellidos;
+                    arbi.Deporte=arbitro.Deporte;
+                    arbi.Rh=arbitro.Rh;
+                    arbi.Celular=arbitro.Celular;
+                    arbi.ColegioInstruccionId=arbitro.ColegioInstruccionId;
+                    arbi.TorneoId=arbitro.TorneoId;
+                    this.appContext.SaveChanges();
+                    return true;
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
+            }
+            return false;
         }
 
         //Eliminar Arbitro

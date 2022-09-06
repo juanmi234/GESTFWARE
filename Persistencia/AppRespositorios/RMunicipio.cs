@@ -36,8 +36,24 @@ namespace Persistencia{
             return municipio;
         }
         public bool ModificarMunicipio(Municipio mun){
+            //Falta por HACER
+            municipio=this.appContext.Municipios.Find(mun.Id);
+            if(municipio!=null){
+                try
+                {
+                    municipio.Nombre=mun.Nombre;
+                    //municipio.Torneos=mun.Torneos;
+                    this.appContext.SaveChanges();
+                    return true;
+                }
+                catch (System.Exception)
+                {
+                    return false;   
+                }
+            }
             return false;
         }
+        //Eliminar Municipio
         public bool EliminarMunicipio(int id){
             municipio = this.appContext.Municipios.Find(id);
             if(municipio!=null){
@@ -51,6 +67,7 @@ namespace Persistencia{
             }
             return false;
         }
+        //Listat Municipio
         public List<Municipio> ListarMunicipiosList(){
             /*using(var ctx = new AppContext()){
                 return ctx.Municipios

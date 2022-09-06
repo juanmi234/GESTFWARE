@@ -8,6 +8,7 @@ namespace Persistencia{
     public interface IRDeportista{
         public bool CrearDeportista(Deportista deportista);
         public Deportista BuscarDeportista(string Documento);
+        public bool ModificarDeportista(Deportista depor);
         public bool EliminarDeportista(int id);
         public List<Deportista> ListarDeportistaList();
         public IEnumerable<Deportista> ListarDeportistaIE();

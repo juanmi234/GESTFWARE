@@ -35,6 +35,33 @@ namespace Persistencia{
 
         }
 
+        //Modificar Deportista
+        public bool ModificarDeportista(Deportista depor){
+            deportista=this.appContext.Deportistas.Find(depor.Id);
+            if(deportista!=null){
+                try
+                {
+                    deportista.Documento=depor.Documento;
+                    deportista.Nombres=depor.Nombres;
+                    deportista.Apellidos=depor.Apellidos;
+                    deportista.Genero=depor.Genero;
+                    deportista.Deporte=depor.Deporte;
+                    deportista.FechaNacimiento=depor.FechaNacimiento;
+                    deportista.Rh=depor.Rh;
+                    deportista.Eps=depor.Eps;
+                    deportista.Celular=depor.Celular;
+                    deportista.Correo=depor.Correo;
+                    deportista.EquipoId=depor.EquipoId;
+                    this.appContext.SaveChanges();
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
         //Eliminar Deportista
         public bool EliminarDeportista(int id){
             deportista=this.appContext.Deportistas.Find(id);

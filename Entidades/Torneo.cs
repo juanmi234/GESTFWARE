@@ -43,7 +43,10 @@ namespace Dominio{
         public List<TorneoEquipo> TorneoEquipos {get;set;}
         public List<UnidadDeportiva> UnidadesDeportivas {get;set;}
 
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int MunicipioId {get;set;}
+        
+        [Required(ErrorMessage="Este campo es obligatorio")]
         public int PatrocinadorId {get;set;}
         
     }

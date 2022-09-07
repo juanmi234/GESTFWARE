@@ -31,7 +31,7 @@ namespace Persistencia{
 
         //Buscar Equipo
         public Equipo BuscarEquipo(int id){
-            return equipo=this.appContext.Equipos.Find(id);
+            return this.appContext.Equipos.Find(id);
         }
 
         //Modificar Equipo

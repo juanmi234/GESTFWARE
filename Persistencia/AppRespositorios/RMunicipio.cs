@@ -32,8 +32,9 @@ namespace Persistencia{
             /*return this.appContext.Municipios.
                                        Where(x=>x.Id==id)
                                        .SingleOrDefault();*/
-            municipio=this.appContext.Municipios.Find(id);
-            return municipio;
+            //return municipio=this.appContext.Municipios.Find(id);
+            //return municipio;
+            return this.appContext.Municipios.Find(id);
         }
         public bool ModificarMunicipio(Municipio mun){
             municipio=this.appContext.Municipios.Find(mun.Id);

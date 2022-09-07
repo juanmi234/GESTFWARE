@@ -34,12 +34,12 @@ namespace Persistencia{
 
         //Buscar Escenario
         public Escenario BuscarEscenario(int id){
-            return escenario=this.appContext.Escenarios.Find(id);
+            return this.appContext.Escenarios.Find(id);
         }
 
         //Modificar Escenario
         public bool ModificarEscenario(Escenario esc){
-            escenario=BuscarEscenario(esc.Id);
+            escenario=this.appContext.Escenarios.Find(esc.Id);
             if(escenario!=null){
                 //Si existe y se puede modificar
                 try{

@@ -29,8 +29,8 @@ namespace Persistencia
             return false;
         }
         public Torneo BuscarTorneo(int id){
-            torneo=this.appContext.Torneos.Find(id);
-            return torneo;
+            return this.appContext.Torneos.Find(id);
+            
         }
         public bool EliminarTorneo(int id){
             torneo=this.appContext.Torneos.Find(id);

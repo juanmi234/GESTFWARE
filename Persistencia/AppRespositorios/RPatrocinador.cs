@@ -33,7 +33,7 @@ namespace Persistencia{
 
         //Buscar Patrocinador
         public Patrocinador BuscarPatrocinador(int id){
-            return patrocinador=this.appContext.Patrocinadores.Find(id);
+            return this.appContext.Patrocinadores.Find(id);
         }
 
         //Modificar Patrocinador

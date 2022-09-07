@@ -1,0 +1,73 @@
+using Dominio;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Persistencia{
+    public class RColegioInstruccion:IRColegioInstruccion{
+        //Esto siempre va, impletenta la clase Interfaz  
+        private readonly AppContext appContext;
+        private static ColegioInstruccion colegio;
+
+        //Constructor por defecto
+        public RColegioInstruccion(AppContext _appContext){
+            this.appContext=_appContext;
+        }
+
+        //Metodos CRUD
+        //Crear Colegio
+        public bool CrearColegio(ColegioInstruccion cole){
+            try
+            {
+                this.appContext.ColegiosInstrucciones.Add(cole);
+                this.appContext.SaveChanges();
+                return true;
+            }
+            catch (System.Exception)
+            {
+                return false;
+            }
+        }
+
+        //Buscar Colegio
+        public ColegioInstruccion BuscarColegio(string Nit){
+            colegio=this.appContext.ColegiosInstrucciones.Find(Nit);
+            //No estoy seguro
+            return colegio; 
+        }
+
+        //Modificar Colegio
+        public bool ModificarColegio(ColegioInstruccion col){
+            //Aún falta por hacer
+            return false;
+        }
+
+        //Eliminar Colegio
+        public bool EliminarColegio (string Nit){
+            colegio=this.appContext.ColegiosInstrucciones.Find(Nit);
+            if(colegio!=null){
+                try
+                {
+                    this.appContext.ColegiosInstrucciones.Remove(colegio);
+                    this.appContext.SaveChanges();
+                    return true;
+                }
+                catch (System.Exception)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        //Listar Colegios con List
+        public List<ColegioInstruccion> ListarColegiosList(){
+            return this.appContext.ColegiosInstrucciones.ToList();
+        }
+
+        //Listar Colegios con IEnumerable
+        public IEnumerable<ColegioInstruccion> ListarColegiosIE(){
+            return this.appContext.ColegiosInstrucciones;
+        }
+
+    }
+}

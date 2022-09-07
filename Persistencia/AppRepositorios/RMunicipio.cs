@@ -36,7 +36,6 @@ namespace Persistencia{
             return municipio;
         }
         public bool ModificarMunicipio(Municipio mun){
-            //Falta por HACER
             municipio=this.appContext.Municipios.Find(mun.Id);
             if(municipio!=null){
                 try

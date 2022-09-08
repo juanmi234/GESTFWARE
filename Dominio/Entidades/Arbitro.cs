@@ -54,7 +54,9 @@ namespace Dominio{
         //Para las relaciones
         [Required(ErrorMessage="El arbitro debe ser egresado de un Colegio de instrucción")]
         public int ColegioInstruccionId {get;set;}
+        public ColegioInstruccion Colegio {get;set;}//Propiedad navigacional
         public int? TorneoId {get;set;}//Creo puede ser nulo, si estan en desacuerdo digan
+        public Torneo Torneo {get;set;}//Propiedad navigacional para evitar los View de cada entidad
 
     }
 }

@@ -15,9 +15,6 @@ namespace Dominio{
         [MinLength(4, ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
         [DataType(DataType.Text)]
         public string Nombre{get;set;}
-        public List<Torneo> Torneos {get;set;}
-        public Municipio(){
-            Torneos = new List<Torneo>();
-        }
+        public List<Torneo> Torneos {get;set;}=new List<Torneo>();
     }
 }

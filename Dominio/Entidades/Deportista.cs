@@ -71,6 +71,7 @@ namespace Dominio{
 
         //LLAVES FORANEAS
         [Required(ErrorMessage="Un deportista debe esta en un equipo")]
-        public int EquipoId {get;set;}
+        public int EquipoId {get;set;}//Relacion con tabla Equipo
+        public Equipo equipo {get;set;}//Propiedad navigacional
     }
 }

@@ -49,5 +49,6 @@ namespace Dominio{
         //Llaves foraneas
         [Required(ErrorMessage="Un entrenador debe tener asignado un equipo")]
         public int EquipoId {get;set;}
+        public Equipo equipo {get;set;}//Propiedad navigacional
     }
 }

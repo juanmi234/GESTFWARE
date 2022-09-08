@@ -20,14 +20,15 @@ namespace Dominio{
 
         //Requerimientos campo Jugadores
         [Required(ErrorMessage="Este campo es obligatorio")]
-        [Range(0, 1000000000,ErrorMessage="Ingrese un valor correcto")]
+        [Range(0, 30,ErrorMessage="Ingrese un valor correcto")]
         public int Jugadores {get;set;}
         
         //Requerimientos campo PatrocinadorId
         [Required(ErrorMessage="Un equipo debe estar patrocinado por al menos una marca")]
         public int PatrocinadorId {get;set;}
+        public Patrocinador patrocinador {get;set;}//Propiedad navigacional
         //Llave foranea
-        public List<TorneoEquipo> TorneosEquipo {get;}=new List<TorneoEquipo>();//Para relacion muchos a muchos
-        public List<Deportista> Deportistas {get;} = new List<Deportista>();
+        public List<TorneoEquipo> TorneosEquipo {get;set;}=new List<TorneoEquipo>();//Para relacion muchos a muchos
+        public List<Deportista> Deportistas {get;set;} = new List<Deportista>();
     }
 }

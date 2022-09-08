@@ -48,10 +48,12 @@ namespace Dominio{
         //LLAVES FORANEAS
         [Required(ErrorMessage="Escoga un Municipio donde se realizará el torneo")]
         public int MunicipioId {get;set;}
+        public Municipio municipio {get;set;}
 
         public int? PatrocinadorId {get;set;}//Este creo puede ser nulo
+        public Patrocinador patrocinador {get;set;}
 
-        //Listar ya inicializadas
+        //Listas ya inicializadas
         public List<Arbitro> Arbitros {get;set;}=new List<Arbitro>();
         public List<TorneoEquipo> TorneoEquipos {get;set;}=new List<TorneoEquipo>(); //Para la relacion muchos a muchos
         public List<UnidadDeportiva> UnidadesDeportivas {get;set;}=new List<UnidadDeportiva>();

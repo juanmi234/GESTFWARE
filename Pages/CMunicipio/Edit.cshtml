@@ -1,0 +1,25 @@
+﻿@page
+@model FrontEnd.Pages.CMunicipio.EditModel
+@{
+    ViewData["Title"]="Editar Municipios";
+}
+<h2 >Editar Municipios</h2>
+<div>
+    <hr /><!--Este hr es para crear una linea debajo de nuestro h2, es una linea divisora-->
+    <div>
+        <section>
+            <form method="post"><!--El metodo post es para Enviar información de ese formulario-->
+                <div asp-validation-summary="ModelOnly" class="text-danger">
+                    <!--Con ese "asp-validation-summary",permitimos que se conecte a un modelo 
+                    Con el text-danger es para enviar los errores en los campos-->
+                </div>
+                <div>
+                    <label asp-for="municipio.Nombre"><!--El "asp-for" hace referencia al atributo que le pongamos
+                    permitiendo así que el texto no editable (label) contenga el atributo que le decimos, en este caso Nombre--></label>
+                    <input asp-for="municipio.Nombre"/>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+

@@ -1,7 +1,17 @@
+using Persistencia;
+//Importante tener aquí el builder.Services.AddDbContext<>
+//Para poder Listar las entidades en la página web
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+//Crear un contexto de datos, (Conectar con el db Context)
+builder.Services.AddDbContext<Persistencia.AppContext>();
+
+//Inyección de dependencias por cada interfaz y la clase que implementa
+builder.Services.AddScoped<IRMunicipio,RMunicipio>();
 
 var app = builder.Build();
 

@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\usuario\Pictures\MISIÓN TIC 2022\Tareas MinTic\Ciclo 2 - MinTic\Proyecto Ciclo 3\Avance\EscenarioDeportivo\Aplicacion\FrontEnd
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

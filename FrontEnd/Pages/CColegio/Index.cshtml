@@ -24,9 +24,9 @@
                     <td>@col.Nit</td>
                     <td>@col.RazonSocial</td>
                     <td>
-                        <a asp-page="./Edit" class="btn btn-primary">Editar</a>
-                        <a asp-page="./Details" class="btn btn-info">Detalles</a>
-                        <a asp-page="./Delete" class="btn btn-danger">Eliminar</a>
+                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@col.Id">Editar</a>
+                        <a asp-page="./Details" class="btn btn-info" asp-route-id="@col.Id">Detalles</a>
+                        <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@col.Id">Eliminar</a>
                     </td>
                 </tr>
             }

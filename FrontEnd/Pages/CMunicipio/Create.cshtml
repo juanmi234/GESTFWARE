@@ -4,7 +4,7 @@
     ViewData["Title"]="Crear Municipio";
 }
 <h2 >Crear Municipio</h2>
-<h4 class="text-danger">@ViewData["Error"]</h4>
+<h3 class="text-danger">@ViewData["Error"]</h3>
 
 <hr /><!--Este hr es para crear una linea debajo de nuestro h2, es una linea divisora-->
 <div class="row">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Crear" class="btn btn-success" /><!--Boton de crear-->
+                <input type="submit" value="Crear" class="btn btn-success" /><!--Boton de crear, el value es el nombre del botón-->
                 <a asp-page="Index" class="btn btn-danger">Cancelar</a><!--Ese asp-page nos regresa a la pagina que le indiquemos-->
             </div>
 

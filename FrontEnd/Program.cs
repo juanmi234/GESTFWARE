@@ -12,6 +12,10 @@ builder.Services.AddDbContext<Persistencia.AppContext>();
 
 //Inyección de dependencias por cada interfaz y la clase que implementa
 builder.Services.AddScoped<IRMunicipio,RMunicipio>();
+builder.Services.AddScoped<IRArbitro,RArbitro>();
+builder.Services.AddScoped<IRColegioInstruccion,RColegioInstruccion>();
+builder.Services.AddScoped<IRDeportista,RDeportista>();
+builder.Services.AddScoped<IREntrenador,REntrenador>();
 
 var app = builder.Build();
 

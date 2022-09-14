@@ -5,10 +5,12 @@
     <ProjectReference Include="..\Persistencia\Persistencia.csproj" />
     <ProjectReference Include="..\Dominio\Dominio.csproj" />
   </ItemGroup>
+  <!--dotnet new page -n nombrepagina -na Frontend.Pages.NombreSubCarpeta -o .\Pages\NombreSubcarpeta
+  Esto es para crear las paginas create, edit, delete, details-->
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 

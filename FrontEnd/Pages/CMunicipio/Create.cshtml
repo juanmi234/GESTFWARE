@@ -15,7 +15,7 @@
                 <!--Con ese "asp-validation-summary",permitimos que se conecte a un modelo 
                 Con el text-danger es para enviar los errores en los campos-->
             </div>
-
+            <br>
             <div class="form-group">
                 <label asp-for="municipio.Nombre" class="control-label"></label><!--El "asp-for" hace referencia al atributo que le pongamos
                 permitiendo así que el texto no editable (label) contenga el atributo que le decimos, en este caso Nombre-->
@@ -23,7 +23,7 @@
                 <span asp-validation-for="municipio.Nombre" class="text-danger"></span>
                 <!--El "asp-validation-for", permite la validacion para el campo que le especifiquemos-->
             </div>
-
+            <br>
             <div class="form-group">
                 <input type="submit" value="Crear" class="btn btn-success" /><!--Boton de crear, el value es el nombre del botón-->
                 <a asp-page="Index" class="btn btn-danger">Cancelar</a><!--Ese asp-page nos regresa a la pagina que le indiquemos-->

@@ -21,6 +21,7 @@ namespace FrontEnd.Pages.CColegio
             if(colegio==null){
                 //Entonces no se encontró el colegio, aunque no deberia pasar
                 ViewData["Error"]="No se encontró el Colegio";
+                return Page();
             }
             return Page();
         }

@@ -29,8 +29,8 @@ namespace Persistencia{
         }
 
         //Buscar Deportista
-        public Deportista BuscarDeportista(string Documento){
-            deportista=this.appContext.Deportistas.Find(Documento);
+        public Deportista BuscarDeportista(int id){
+            deportista=this.appContext.Deportistas.Find(id);
             return deportista;
 
         }

@@ -14,14 +14,14 @@ namespace Dominio
         [MaxLength(15)]//No le pondré mensaje porque permite en la 
                         //página web no deja escribir más de estos caracteres 
         [MinLength(7,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        [RegularExpression("([0-9]+)", ErrorMessage="Digite solo numeros en este campo")]
+        [RegularExpression("([0-9]*", ErrorMessage="El campo {0} solo acepta valores numericos")]
         public string Documento {get;set;}
 
         //Requerimientos para el campo Nombres
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(40)]
         [MinLength(3,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        [DataType(DataType.Text)]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombres {get;set;}
 
         //Requerimientos para el campo Deporte
@@ -39,20 +39,19 @@ namespace Dominio
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(16)]//Por si lo escribe con espacios y con el sufijo "+57"
         [MinLength(10,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        [RegularExpression("([0-9]+)",ErrorMessage="Por favor digite un numero de telefono valido")]
+        [RegularExpression("([0-9]+)",ErrorMessage="El campo {0} solo acepta valores numericos")]
+        [Range(3000000000,3509999999, ErrorMessage="Digite un número de teléfono válido")]
         public string Telefono {get;set;}
 
         //Requerimientos para campo Ciudad
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(15)]
         [MinLength(3,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        [DataType(DataType.Text)]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Ciudad {get;set;}
 
         //Requerimientos para campo Personeria
         [MaxLength(30)]
-        [MinLength(4,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        [DataType(DataType.Text)]
         public bool Personeria {get;set;}
 
         //Para las relaciones

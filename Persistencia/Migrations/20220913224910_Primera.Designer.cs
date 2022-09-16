@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistencia;
 
@@ -11,9 +12,10 @@ using Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20220913224910_Primera")]
+    partial class Primera
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,9 +72,6 @@ namespace Persistencia.Migrations
 
                     b.HasIndex("ColegioInstruccionId");
 
-                    b.HasIndex("Documento")
-                        .IsUnique();
-
                     b.HasIndex("TorneoId");
 
                     b.ToTable("Arbitros");
@@ -103,8 +102,8 @@ namespace Persistencia.Migrations
 
                     b.Property<string>("Nit")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("RazonSocial")
                         .IsRequired()
@@ -117,9 +116,6 @@ namespace Persistencia.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Nit")
-                        .IsUnique();
 
                     b.ToTable("ColegiosInstrucciones");
                 });
@@ -158,6 +154,7 @@ namespace Persistencia.Migrations
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Eps")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
@@ -310,9 +307,6 @@ namespace Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Nombre")
-                        .IsUnique();
-
                     b.ToTable("Municipios");
                 });
 
@@ -330,6 +324,7 @@ namespace Persistencia.Migrations
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Deporte")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
@@ -391,7 +386,7 @@ namespace Persistencia.Migrations
                     b.Property<DateTime>("FechaFin")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("FechaInicio")
+                    b.Property<DateTime>("FechaIncio")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("MunicipioId")
@@ -514,7 +509,7 @@ namespace Persistencia.Migrations
                     b.HasOne("Dominio.Patrocinador", "patrocinador")
                         .WithMany("Equipos")
                         .HasForeignKey("PatrocinadorId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("patrocinador");

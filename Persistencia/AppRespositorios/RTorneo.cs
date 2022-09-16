@@ -53,7 +53,7 @@ namespace Persistencia
                     torneo.Nombre=torn.Nombre;
                     torneo.Categoria=torn.Categoria;
                     torneo.Deporte=torn.Deporte;
-                    torneo.FechaIncio=torn.FechaIncio;
+                    torneo.FechaInicio=torn.FechaInicio;
                     torneo.FechaFin=torn.FechaFin;
                     torneo.CantidadEquipos=torn.CantidadEquipos;
                     torneo.MunicipioId=torn.MunicipioId;
@@ -61,10 +61,8 @@ namespace Persistencia
                     //torneo.Arbitros=torn.Arbitros;
                     //torneo.UnidadesDeportivas=torn.UnidadesDeportivas;
                     //torneo.TorneoEquipos=torn.TorneoEquipos;
-                    if(!Existe(torneo)){
-                        this.appContext.SaveChanges();
-                        return true;
-                    }
+                    this.appContext.SaveChanges();
+                    return true;
                 }
                 catch (System.Exception)
                 {

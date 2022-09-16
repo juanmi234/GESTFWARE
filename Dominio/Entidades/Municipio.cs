@@ -13,7 +13,7 @@ namespace Dominio{
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(30, ErrorMessage="El campo {0} debe ser máximo de {1} caracteres")]
         [MinLength(4, ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
-        [DataType(DataType.Text)]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombre{get;set;}
         public List<Torneo> Torneos {get;set;}=new List<Torneo>();
     }

@@ -11,6 +11,7 @@ namespace Dominio{
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(60,ErrorMessage="El campo {0} debe ser máximo de {1} caracteres")]
         [MinLength(4,ErrorMessage="El campo {0} debe tener mínimo de {1} caracteres")]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombre {get;set;}
 
         //Requerimientos para campo categoria
@@ -28,7 +29,7 @@ namespace Dominio{
         //Requerimiento para campo FechaInicio
         [Required(ErrorMessage="Este campo es obligatorio")]
         [DataType(DataType.Date)]
-        public DateTime FechaIncio {get;set;}
+        public DateTime FechaInicio {get;set;}
 
         //Requerimiento para campo FechaFin
         [Required(ErrorMessage="Este campo es obligatorio")]

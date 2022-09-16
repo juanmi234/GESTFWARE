@@ -6,10 +6,19 @@ using System.Collections.Generic;
 
 namespace Persistencia{
     public class AppContext:DbContext{
-        /*protected override void OnModelCreating(ModelBuilder modelBuilder){
+        protected override void OnModelCreating(ModelBuilder modelBuilder){
             //Todo torneo se relaciona con varios equipos, todo equipo se relaciona con varios torneos
             //modelBuilder.Entity<Equipo>().HasMany(E=>E.Torneos).WithMany(E=>E.Equipos);
-        }*/
+            modelBuilder.Entity<Municipio>().HasIndex(m=>m.Nombre).IsUnique();
+            modelBuilder.Entity<Arbitro>().HasIndex(ar=>ar.Documento).IsUnique();
+            modelBuilder.Entity<ColegioInstruccion>().HasIndex(c=>c.Nit).IsUnique();
+            //modelBuilder.Entity<Torneo>().HasIndex(tor=>tor.Nombre).IsUnique();
+
+            modelBuilder.Entity<Patrocinador>()
+                        .HasMany(p=>p.Equipos)
+                        .WithOne(e=>e.patrocinador)
+                        .OnDelete(DeleteBehavior.Restrict);
+        }
 
         //Conectar con la base de datos
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){

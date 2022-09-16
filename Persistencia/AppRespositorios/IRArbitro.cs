@@ -6,9 +6,9 @@ namespace Persistencia{
     //También debe siempre ser public interface
         //Metodos CRUD
         public bool CrearArbitro(Arbitro arbitro);
-        public Arbitro BuscarArbitro(string documento);
+        public Arbitro BuscarArbitro(int id);
         public bool ModificarArbitro(Arbitro arbitro);
-        public bool EliminarArbitro(string documento);
+        public bool EliminarArbitro(int id);
         public List<Arbitro> ListarArbitrosList();
         public IEnumerable<Arbitro> ListarArbitrosIE();
     }

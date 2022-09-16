@@ -32,8 +32,8 @@ namespace Persistencia{
         }
 
         //Buscar Colegio
-        public ColegioInstruccion BuscarColegio(string Nit){
-            return colegio=this.appContext.ColegiosInstrucciones.Find(Nit);
+        public ColegioInstruccion BuscarColegio(int id){
+            return colegio=this.appContext.ColegiosInstrucciones.Find(id);
         }
 
         //Modificar Colegio
@@ -49,10 +49,8 @@ namespace Persistencia{
                     colegio.Deporte=col.Deporte;
                     colegio.Telefono=col.Telefono;
                     //colegio.Arbitros=col.Arbitros;
-                    if(!Existencia(colegio)){
-                        this.appContext.SaveChanges();
-                        return true;
-                    }
+                    this.appContext.SaveChanges();
+                    return true;
                 }
                 catch (System.Exception)
                 {
@@ -63,8 +61,8 @@ namespace Persistencia{
         }
 
         //Eliminar Colegio
-        public bool EliminarColegio (string Nit){
-            colegio=this.appContext.ColegiosInstrucciones.Find(Nit);
+        public bool EliminarColegio (int id){
+            colegio=this.appContext.ColegiosInstrucciones.Find(id);
             if(colegio!=null){
                 try
                 {
@@ -93,7 +91,7 @@ namespace Persistencia{
         //Validaciones
         private bool Existencia(ColegioInstruccion col){
             colegio=this.appContext.ColegiosInstrucciones.FirstOrDefault(
-                c=>c.RazonSocial==col.RazonSocial);
+                c=>c.Nit==col.Nit);
 
             if(colegio!=null){
                 //Si existe

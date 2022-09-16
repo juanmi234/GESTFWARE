@@ -18,28 +18,30 @@ namespace Dominio{
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(30, ErrorMessage="El campo {0} debe ser máximo de {1} caracteres")]
         [MinLength(3, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
-        [DataType(DataType.Text)]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombres {get;set;}
 
         //Requerimientos para campo apellido
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(30, ErrorMessage="El campo {0} debe ser máximo de {1} caracteres")]
         [MinLength(3, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
-        [DataType(DataType.Text)]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Apellidos {get;set;}
 
         //Requerimientos para campo Deporte
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(30)]
         [MinLength(4,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
-        [DataType(DataType.Text)]
         public string Deporte {get;set;}
+
         //Requerimientos campo Celular
         [Required(ErrorMessage="Este campo es obligario")]
         [MaxLength(15)]
         [MinLength(10,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
         [RegularExpression("([0-9]+)", ErrorMessage="Por favor digite solo números")]
+        [Range(3000000000,3509999999, ErrorMessage="Ingrese un número de celular válido")]
         public string Celular {get;set;}
+
         //Requerimientos campo correo
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(50)]

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 namespace Persistencia{
     public interface IRColegioInstruccion{
         public bool CrearColegio(ColegioInstruccion colegio);
-        public ColegioInstruccion BuscarColegio(string Nit);
+        public ColegioInstruccion BuscarColegio(int id);
         public bool ModificarColegio(ColegioInstruccion colegio);
-        public bool EliminarColegio(string Nit);
+        public bool EliminarColegio(int id);
         public List<ColegioInstruccion> ListarColegiosList();
         public IEnumerable<ColegioInstruccion> ListarColegiosIE();
     }

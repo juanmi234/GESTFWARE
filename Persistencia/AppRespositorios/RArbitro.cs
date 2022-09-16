@@ -18,23 +18,22 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Arbitro
         public bool CrearArbitro(Arbitro arbitro){
-            if(!Existencia(arbitro)){
+            //if(!Existencia(arbitro)){
                 try{
                     this.appContext.Arbitros.Add(arbitro);
                     this.appContext.SaveChanges();
                     return true;
                 }catch(System.Exception){
-                    /*En caso que sea false, en la pagina debe mostrar un mensaje
-                    igualmente si es true*/
+                    /*En caso que sea false, en la pagina debe mostrar un mensaje*/
                     return false;
                 }
-            }
+            //}
             return false;
         }
 
         //Buscar Arbitro
-        public Arbitro BuscarArbitro(string documento){
-            arbi = appContext.Arbitros.Find(documento);
+        public Arbitro BuscarArbitro(int id){
+            arbi = appContext.Arbitros.Find(id);
             //Aun falta por hacer
             return arbi;
         }
@@ -67,8 +66,8 @@ namespace Persistencia{
         }
 
         //Eliminar Arbitro
-        public bool EliminarArbitro(string documento){
-            arbi = this.appContext.Arbitros.Find(documento);
+        public bool EliminarArbitro(int id){
+            arbi = this.appContext.Arbitros.Find(id);
             /*Este de arriba se hace para buscar primero, y luego
             la condicional es si encontró algo*/
             if(arbi!=null){

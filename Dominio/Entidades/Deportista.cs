@@ -16,26 +16,27 @@ namespace Dominio{
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(30)]
         [MinLength(3,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombres {get;set;}
 
         //Requerimientos para campo Apellidos
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(30)]
         [MinLength(3,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Apellidos {get;set;}
 
         //Requerimientos para campo Genero
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(10)]
         [MinLength(3,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
-        [DataType(DataType.Text)]
+        [RegularExpression("([A-Za-z ]*", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Genero {get;set;}
 
         //Requerimientos para campo Deporte
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(20)]
         [MinLength(4,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
-        [DataType(DataType.Text)]
         public string Deporte {get;set;}
 
         //Requerimientos para campo FechaNacimiento
@@ -47,13 +48,11 @@ namespace Dominio{
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(3)]
         [MinLength(1,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
-        [DataType(DataType.Text)]
         public string Rh {get;set;}
 
         //Requerimientos campo Eps
         [MaxLength(30)]
         [MinLength(5,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
-        [DataType(DataType.Text)]
         public string Eps {get;set;}
 
         //Requerimientos campo Celular
@@ -61,6 +60,7 @@ namespace Dominio{
         [MaxLength(15)]
         [MinLength(10,ErrorMessage="El campo {0} debe tener mínimo {1} caracteres")]
         [RegularExpression("([0-9]+)",ErrorMessage="Por favor digite solo números")]
+        [Range(3000000000,3509999999, ErrorMessage="Ingrese un número de celular válido")]
         public string Celular {get;set;}
 
         //Requerimientos campo Correo

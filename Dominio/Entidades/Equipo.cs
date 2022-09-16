@@ -11,6 +11,7 @@ namespace Dominio{
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(25)]
         [MinLength(5, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
+        [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombre {get;set;}
         //public List<string> Deporte {get;set;}
 
@@ -20,13 +21,15 @@ namespace Dominio{
 
         //Requerimientos campo Jugadores
         [Required(ErrorMessage="Este campo es obligatorio")]
-        [Range(0, 30,ErrorMessage="Ingrese un valor correcto")]
+        [RegularExpression("([0-9]+)", ErrorMessage="Digite sólo números")]
+        [Range(0, 30,ErrorMessage="Demasiados jugadores para un equipo")]
         public int Jugadores {get;set;}
         
         //Requerimientos campo PatrocinadorId
         [Required(ErrorMessage="Un equipo debe estar patrocinado por al menos una marca")]
         public int PatrocinadorId {get;set;}
         public Patrocinador patrocinador {get;set;}//Propiedad navigacional
+        
         //Llave foranea
         public List<TorneoEquipo> TorneosEquipo {get;set;}=new List<TorneoEquipo>();//Para relacion muchos a muchos
         public List<Deportista> Deportistas {get;set;} = new List<Deportista>();

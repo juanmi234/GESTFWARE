@@ -7,3 +7,4 @@ Además en la linea 31, hay comentariadas ciertas formas de buscar el Municipio,
 ACTUALIZACIÓN 16-09-2022
 Ya está el FrontEnd realizado con algunas paginas web, en el FrontEnd.csproj están comentariadas las formas de agg las nuevas páginas, igual lo dejaré por acá
 dotnet new page -n NombrePagina -n FrontEnd.Pages.NombreCarpeta -o .\Pages\NombreCarpeta\
+Se modificó el IRArbitro,RArbitro el metodo BuscarArbitro(string Documento) y se reemplazo por BuscarArbitro(int id) igualmente para las interfaces IRColegioInstruccion,RColegioInstruccion e IRDeportista,RDeportista

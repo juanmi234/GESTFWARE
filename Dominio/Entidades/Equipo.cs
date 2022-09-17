@@ -13,7 +13,11 @@ namespace Dominio{
         [MinLength(5, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
         [RegularExpression("([A-Za-z ]*)", ErrorMessage="El campo {0} no acepta valores numericos")]
         public string Nombre {get;set;}
-        //public List<string> Deporte {get;set;}
+
+        [Required(ErrorMessage="Este campo es obligatorio")]
+        [MaxLength(25)]
+        [MinLength(3, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
+        public string Deporte {get;set;}
 
         [Required(ErrorMessage="Un equipo debe tener un técnico")]
         public Entrenador Tecnico {get;set;} 

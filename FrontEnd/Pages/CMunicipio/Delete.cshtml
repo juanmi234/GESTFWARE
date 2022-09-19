@@ -5,23 +5,25 @@
 }
 
 <h2>Eliminar Municipio</h2>
-@if(ViewData["Error"]==null){
-    <h3 class="text-danger">¿Esta seguro de eliminar este registro?</h3>
-}else{
+@if(ViewData["Error"]!=null){
     <h4 class="text-danger">@ViewData["Error"]</h4>
+}else{
+    <h3 class="text-danger">¿Esta seguro de eliminar este registro?</h3>
 }
 
 <hr/>
 <div class="row">
     <div class="col-md-4">
         <form method="post" asp-action="Delete">
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label asp-for="municipio.Id" class="control-label"></label>
                 <input asp-for="municipio.Id" class="form-control" readonly/>
-            </div>
-            <br>
+            </div>-->
             <div>
-                <label asp-for="municipio.Nombre" class="control-label"></label>
+                <input asp-for="municipio.Id" hidden />
+            </div>
+            <div class="form-group">
+                <b><label asp-for="municipio.Nombre" class="control-label"></label></b>
                 <input asp-for="municipio.Nombre" class="form-control" readonly/>
             </div>
             <br>

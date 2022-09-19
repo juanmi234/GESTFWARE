@@ -18,7 +18,7 @@ namespace FrontEnd.Pages.CColegio
         }
         public ActionResult OnGet(int id){
             colegio = objColegio.BuscarColegio(id);
-            if(colegio!=null){
+            if(colegio==null){
                 ViewData["Error"]="No se encontró el colegio";
                 return Page();
             }
@@ -34,7 +34,6 @@ namespace FrontEnd.Pages.CColegio
                 ViewData["Error"]="Ya existe un colegio con este mismo NIT";
                 return Page();
             }
-            return Page();
         }
     }
 }

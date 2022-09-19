@@ -15,15 +15,13 @@
     <table class="table">
         <thead><!--Encabezado!-->
             <tr><!--Fila!-->
-                <th>Id</th><!--th porque estamos en una cabecera, es como el título de la tabla mejor dicho!-->
-                <th>Nombre</th>
+                <th>Nombre</th><!--th porque estamos en una cabecera, es como el título de la columna mejor dicho!-->
             </tr>
         </thead>
         <tbody>
             @foreach (var mun in Model.Municipios)//Municipios es el IEnumerable que tenemos
             {
                 <tr>
-                    <td>@mun.Id</td>
                     <td>@mun.Nombre</td>
                     <td>
                         <a asp-page="./Edit" class="btn btn-primary" asp-route-id=@mun.Id>Editar

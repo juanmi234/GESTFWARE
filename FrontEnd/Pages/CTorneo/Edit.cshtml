@@ -1,27 +1,30 @@
 ﻿@page
-@model FrontEnd.Pages.CTorneo.CreateModel
+@model FrontEnd.Pages.CTorneo.EditModel
 @{
-    ViewData["Title"]="Nuevo Torneo";
+    ViewData["Title"]="Modificar Torneo";
 }
-
+<h2>Modificar Torneo</h2>
 <h3 class="text-danger">@ViewData["Error"]</h3>
-
+<hr/>
 <div class="row">
     <div class="col-md-4">
+        <form method="post" asp-action="Edit">
 
-        <form method="post" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
+            <div>
+                <input asp-for="torneo.Id" hidden />
+            </div>
 
             <div class="form-group">
                 <b><label asp-for="torneo.Nombre" class="control-label"></label></b>
-                <input asp-for="torneo.Nombre" class="form-control"/>
+                <input asp-for="torneo.Nombre" class="form-control" />
                 <span asp-validation-for="torneo.Nombre" class="text-danger"></span>
             </div>
             <br>
             <div class="form-group">
                 <b><label asp-for="torneo.Categoria" class="control-label"></label></b>
-                <input asp-for="torneo.Categoria" class="form-control"/>
+                <input asp-for="torneo.Categoria" class="form-control" />
                 <span asp-validation-for="torneo.Categoria" class="text-danger"></span>
             </div>
             <br>
@@ -59,7 +62,7 @@
                 <b><label asp-for="torneo.MunicipioId" class="control-label">Municipio en el que se realizará</label></b>
                 <select asp-for="torneo.MunicipioId" class="form-control">
                     <option value="">--Seleccione el Municipio</option>
-                    @foreach (var mun in Model.Municipios){
+                    @foreach (var mun in Model.municipios){
                         <option value="@mun.Id">@mun.Nombre</option>
                     }
                 </select>
@@ -69,7 +72,7 @@
                 <b><label asp-for="torneo.PatrocinadorId" class="control-label">Patrocinador del Torneo</label></b>
                 <select asp-for="torneo.PatrocinadorId" class="form-control">
                     <option value="">--Seleccionar un Patrocinador</option>
-                    @foreach (var pat in Model.Patrocinadores){
+                    @foreach (var pat in Model.patrocinadores){
                         <option value="@pat.Id">@pat.Documento @pat.Nombres</option>
                     }
                 </select>
@@ -77,10 +80,11 @@
             </div>
             <br>
             <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Agregar"/>
+                <input type="submit" class="btn btn-primary" value="Editar"/>
                 <a asp-page="./Index" class="btn btn-info">Regresar</a>
             </div>
 
         </form>
     </div>
 </div>
+

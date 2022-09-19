@@ -12,10 +12,11 @@ namespace FrontEnd.Pages.CArbitro
         //Para propiedades navigacionales
         private readonly IRColegioInstruccion objColegio;
         private readonly IRTorneo objTorneo;
-        public Arbitro arbitro;
+        [BindProperty]
+        public Arbitro arbitro {get;set;}
         //Para propiedades navigacionales
-        public ColegioInstruccion colegio;
-        public Torneo torneo;
+        public ColegioInstruccion colegio {get;set;}
+        public Torneo torneo {get;set;}
         //Metodos
         //Constructor
         public DeleteModel(IRArbitro _objArbitro,IRColegioInstruccion _objColegio,IRTorneo _objTorneo){
@@ -25,17 +26,16 @@ namespace FrontEnd.Pages.CArbitro
         }
         public ActionResult OnGet(int id){
             arbitro=objArbitro.BuscarArbitro(id);
-            colegio=objColegio.BuscarColegio(arbitro.ColegioInstruccionId);
             if(arbitro==null){
                 ViewData["Error"]="No se encontró el Arbitro";
                 return Page();
             }else{
+                colegio=objColegio.BuscarColegio(arbitro.ColegioInstruccionId);
                 if(arbitro.TorneoId!=null){
                     torneo=objTorneo.BuscarTorneo(int.Parse(""+arbitro.TorneoId));
                 }
                 return Page();
             }
-            return Page();
         }
         public ActionResult OnPost(){
             if(objArbitro.EliminarArbitro(arbitro.Id)){
@@ -44,7 +44,6 @@ namespace FrontEnd.Pages.CArbitro
                 ViewData["Error"]="No se pudo eliminar el arbitro";
                 return Page();
             }
-            return Page();
         }
     }
 }

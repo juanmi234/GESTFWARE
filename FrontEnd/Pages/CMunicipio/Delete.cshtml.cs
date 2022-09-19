@@ -36,7 +36,6 @@ namespace FrontEnd.Pages.CMunicipio
                 ViewData["Error"]="No fue posible eliminar este registro";
                 return Page();
             }
-            return Page();
         }
     }
 }

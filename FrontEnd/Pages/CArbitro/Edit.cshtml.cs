@@ -12,11 +12,19 @@ namespace FrontEnd.Page.CArbitro
         //Para propiedades navigacionales
         private readonly IRColegioInstruccion objColegio;
         private readonly IRTorneo objTorneo;
+
         [BindProperty]
         public Arbitro arbitro {get;set;}
         //Para propiedades navigacionales
         public IEnumerable<ColegioInstruccion> Colegios {get;set;}
         public IEnumerable<Torneo> Torneos {get;set;}
+
+        public EditModel(IRArbitro _objArbitro,IRColegioInstruccion _objColegio,IRTorneo _objTorneo){
+            this.objArbitro = _objArbitro;
+            this.objColegio = _objColegio;
+            this.objTorneo = _objTorneo;
+        }
+
         public ActionResult OnGet(int id){
             Colegios = objColegio.ListarColegiosIE();
             Torneos=objTorneo.ListarTorneosIE();

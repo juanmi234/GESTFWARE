@@ -1,0 +1,45 @@
+﻿@page
+@model Frontend.Pages.CColegio.IndexModel
+@{
+    ViewData["Title"]="Index Colegio";
+}
+
+<h1>Gestión de Colegios arbitrales</h1>
+    <p>
+        <a asp-page="Create" class="btn btn-success">Crear Colegio arbitral</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr><!--Encabezado-->
+                <th>Id</th>
+                <th>NIT</th>
+                <th>Razón Social</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Deporte</th>
+                <th>Licencia</th>
+            </tr>
+        </thead>
+        <tbody><!--Recorre la coleccón que viene desde el public OnGet-->
+            @foreach (var cole in Model.Colegios) 
+            {
+                <tr>
+                    <td>@cole.Id</td>
+                    <td>@cole.NIT</td>
+                    <td>@cole.RazonSocial</td>
+                    <td>@cole.Direccion</td>
+                    <td>@cole.Telefono</td>
+                    <td>@cole.Modalidad</td>
+                    <td>@cole.Licencia</td>
+                    <td>
+                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@cole.Id">Edit</a>
+                        <a asp-page="./Details" class="btn btn-warning" asp-route-id="@cole.Id">Details</a>
+                        <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@cole.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+

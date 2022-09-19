@@ -1,0 +1,31 @@
+﻿<h1>Gestión de Unidades deportivas</h1>
+    <p>
+        <a asp-page="Create" class="btn btn-success">Crear Patrocinador</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr><!--Muestra unos pocos datos-->
+                <th>Documento</th>
+                <th>Dirección</th>
+                <th>Municipio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ud in Model.UnidadesDeportivas)
+            {
+                <tr>
+                    <td>@ud.Documento</td>
+                    <td>@ud.Direccion</td>
+                    <td>@ud.Municipio</td>
+                    <td>
+                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@ud.Id">Edit</a>
+                        <a asp-page="./Details" class="btn btn-warning" asp-route-id="@ud.Id">Details</a>
+                        <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@ud.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>

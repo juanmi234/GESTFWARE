@@ -1,0 +1,53 @@
+﻿@page
+@model Frontend.Pages.CDeportista.IndexModel
+@{
+    ViewData["Title"]="Index Deportista";
+}
+
+<h1>Gestión de deportistas</h1>
+    <p>
+        <a asp-page="./Create" class="btn btn-success">Adicionar deportista</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Documento</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Género</th>
+                <th>Deporte</th>
+                <th>Fecha de nacimiento</th>
+                <th>Rh/th>
+                <th>EPS</th>
+                <th>Celular</th>
+                <th>Correo</th>    
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dep in Model.Deportista)
+            {
+                <tr>
+                    <td>@dep.Id</td>
+                    <td>@dep.Documento</td>
+                    <td>@dep.Nombres</td>
+                    <td>@dep.Apellidos</td>
+                    <td>@dep.Genero</td>
+                    <td>@dep.Deporte</td>
+                    <td>@dep.FechaNacimiento</td>
+                    <td>@dep.Rh</td>
+                    <td>@dep.Eps</td>
+                    <td>@dep.Celular</td>
+                    <td>@dep.Correo</td>
+                    <td>
+                        <a asp-page="./Edit" class="btn btn-primary">Edit</a>
+                        <a asp-page="./Details" class="btn btn-warning">Details</a>
+                        <a asp-page="./Delete" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>

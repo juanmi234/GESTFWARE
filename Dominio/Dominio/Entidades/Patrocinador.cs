@@ -27,13 +27,13 @@ namespace Dominio
         //Requerimientos para el campo Deporte
         [MaxLength(30)]
         [MinLength(3,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        public string Deporte {get;set;}//Puede ser nulo
+        public string? Deporte {get;set;}//Puede ser nulo
 
         //Requerimientos para campo Direccion
         [Required(ErrorMessage="Este campo es obligatorio")]
         [MaxLength(40)]
         [MinLength(5,ErrorMessage="El campo {0} debe ser mínimo de {1} caracteres")]
-        public string Direccion {get;set;}//Puede ser nulo
+        public string Direccion {get;set;}
 
         //Requerimientos campo telefono
         [Required(ErrorMessage="Este campo es obligatorio")]

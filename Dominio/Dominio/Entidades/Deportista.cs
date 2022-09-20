@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.dll;
 
 namespace Dominio{
     public class Deportista{
@@ -73,5 +74,11 @@ namespace Dominio{
         [Required(ErrorMessage="Un deportista debe esta en un equipo")]
         public int EquipoId {get;set;}//Relacion con tabla Equipo
         public Equipo equipo {get;set;}//Propiedad navigacional
+
+        //Metodos
+        //Calcular edad
+        public int CalcularEdad(){
+        }
+
     }
 }

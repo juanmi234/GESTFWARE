@@ -11,11 +11,16 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<Persistencia.AppContext>();
 
 //Inyección de dependencias por cada interfaz y la clase que implementa
-builder.Services.AddScoped<IRMunicipio,RMunicipio>();
 builder.Services.AddScoped<IRArbitro,RArbitro>();
 builder.Services.AddScoped<IRColegioInstruccion,RColegioInstruccion>();
 builder.Services.AddScoped<IRDeportista,RDeportista>();
 builder.Services.AddScoped<IREntrenador,REntrenador>();
+builder.Services.AddScoped<IREquipo,REquipo>();
+builder.Services.AddScoped<IREscenario,REscenario>();
+builder.Services.AddScoped<IRMunicipio,RMunicipio>();
+builder.Services.AddScoped<IRPatrocinador,RPatrocinador>();
+builder.Services.AddScoped<IRTorneo,RTorneo>();
+builder.Services.AddScoped<IRUnidadDeportiva,RUnidadDeportiva>();
 
 var app = builder.Build();
 

@@ -15,6 +15,54 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\usuario\Pictures\MISIÓN TIC 2022\Tareas MinTic\Ciclo 2 - MinTic\Proyecto Ciclo 3\Avance\EscenarioDeportivo\Aplicacion\FrontEnd
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CArbitro/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FyYml0cm9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CArbitro/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FyYml0cm9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CArbitro/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FyYml0cm9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CArbitro/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FyYml0cm9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CArbitro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0FyYml0cm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CColegio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0NvbGVnaW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CColegio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0NvbGVnaW9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CColegio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0NvbGVnaW9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CColegio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0NvbGVnaW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CColegio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0NvbGVnaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CDeportista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CDeportista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,6 +81,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CMunicipio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ011bmljaXBpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CTorneo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1Rvcm5lb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CTorneo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1Rvcm5lb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CTorneo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1Rvcm5lb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CTorneo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1Rvcm5lb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/CTorneo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1Rvcm5lb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/usuario/Pictures/MISIÓN TIC 2022/Tareas MinTic/Ciclo 2 - MinTic/Proyecto Ciclo 3/Avance/EscenarioDeportivo/Aplicacion/FrontEnd/Pages/Error.cshtml]

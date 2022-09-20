@@ -34,8 +34,6 @@ namespace FrontEnd.Pages.CMunicipio
                 ViewData["Error"]="Ya existe un municipio con este mismo nombre";
                 return Page();
             }
-
-
             return Page();
         }
     }

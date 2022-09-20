@@ -17,7 +17,7 @@
             </div>
             <br>
             <div class="form-group">
-                <label asp-for="municipio.Nombre" class="control-label"></label><!--El "asp-for" hace referencia al atributo que le pongamos
+                <b><label asp-for="municipio.Nombre" class="control-label"></label></b><!--El "asp-for" hace referencia al atributo que le pongamos
                 permitiendo así que el texto no editable (label) contenga el atributo que le decimos, en este caso Nombre-->
                 <input asp-for="municipio.Nombre" class="form-control"/>
                 <span asp-validation-for="municipio.Nombre" class="text-danger"></span>

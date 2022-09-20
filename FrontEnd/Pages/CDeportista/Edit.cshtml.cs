@@ -6,7 +6,7 @@ using Persistencia;
 
 namespace FrontEnd.Pages.CDeportista
 {
-    public class CreateModel : PageModel
+    public class EditModel : PageModel
     {
         //Atributos
         private readonly IRDeportista objDeportista;
@@ -14,27 +14,29 @@ namespace FrontEnd.Pages.CDeportista
         [BindProperty]
         public Deportista deportista {get;set;}
         public IEnumerable<Equipo> lstEquipos {get;set;}
-        //Metodo constructor
-        public CreateModel(IRDeportista _objDeportista,IREquipo _objEquipo){
+        //Metodo COnstructor
+        public EditModel(IRDeportista _objDeportista, IREquipo _objEquipo){
             this.objDeportista = _objDeportista;
             this.objEquipo = _objEquipo;
         }
-
-        public ActionResult OnGet()
-        {
+        public ActionResult OnGet(int id){
             lstEquipos=objEquipo.ListarEquipoIE();
+            deportista=objDeportista.BuscarDeportista(id);
+            if(deportista==null){
+                //Esto no debería pasar
+                ViewData["Error"]="No se encontró el Deportista";
+                return Page();
+            }
             return Page();
         }
         public ActionResult OnPost(){
             if(!ModelState.IsValid){
-                lstEquipos=objEquipo.ListarEquipoIE();
                 return Page();
             }
-            if(objDeportista.CrearDeportista(deportista)){
+            if(objDeportista.ModificarDeportista(deportista)){
                 return RedirectToPage("./Index");
             }else{
-                lstEquipos=objEquipo.ListarEquipoIE();
-                ViewData["Error"]="Ya existe un deportista con este mismo documento";
+                ViewData["Error"]="No fué posible modificar este Deportistas";
                 return Page();
             }
         }

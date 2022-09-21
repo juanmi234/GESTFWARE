@@ -1,6 +1,7 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Runtime.dll;
+using System.Runtime;
 
 namespace Dominio{
     public class Deportista{
@@ -78,6 +79,10 @@ namespace Dominio{
         //Metodos
         //Calcular edad
         public int CalcularEdad(){
+            DateTime fechaActual = DateTime.Today;
+            int yearActual= fechaActual.Year;
+            int anios = yearActual-this.FechaNacimiento.Year;
+            return anios;
         }
 
     }

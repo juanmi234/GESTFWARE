@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zGNaXyYYpWYIrOCpTn50k0cML794fQfbEzlySjoDkAQf6ikpzhY3vN1LM/brXYmvZSk8Cg7RafqOUiIF6fTIsg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samue\\Desktop\\UNIVERSIDAD JUAN MI\\CICLO #3\\PROGRAMACION\\EVENTOS\\Aplicacion\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\samue\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -11,6 +11,5 @@ namespace Persistencia{
         public bool EliminarMunicipio (int id);
         public List<Municipio> ListarMunicipiosList();
         public IEnumerable<Municipio> ListarMunicipiosIE();
-
     }
 }

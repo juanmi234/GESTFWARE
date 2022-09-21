@@ -16,7 +16,7 @@ namespace Persistencia{
             this.appContext=_appContext;
         }
         public bool CrearDeportista(Deportista depor){
-            if(!Existencia(depor)){
+            if(depor.CalcularEdad()>16){
                 try{
                     this.appContext.Deportistas.Add(depor);
                     this.appContext.SaveChanges();

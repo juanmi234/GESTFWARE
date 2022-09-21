@@ -34,7 +34,8 @@ namespace FrontEnd.Pages.CDeportista
                 return RedirectToPage("./Index");
             }else{
                 lstEquipos=objEquipo.ListarEquipoIE();
-                ViewData["Error"]="Ya existe un deportista con este mismo documento";
+                ViewData["Error"]="Ya existe un deportista con este mismo documento\n"+
+                                    "O, debe tener mínimo 12 años para participar";
                 return Page();
             }
         }

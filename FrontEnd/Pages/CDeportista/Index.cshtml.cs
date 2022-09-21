@@ -13,7 +13,6 @@ namespace FrontEnd.Pages.CDeportista
         private readonly IRDeportista objDeportista;
         private readonly IREquipo objEquipo;
         public List<Deportista> lstDeportistas {get;set;}
-        public Equipo equipo {get;set;}
         //Metodo Constructor
         public IndexModel(IRDeportista _objDeportista,IREquipo _objEquipo){
             this.objDeportista = _objDeportista;

@@ -46,4 +46,14 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
-
+/*No se como se conecta en las Pages que he creado*/
+.orderby {
+  text-align-last: center;
+  padding: 9px;
+  width:400px;
+  border-radius: 1px;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  color: #868585;
+  font-size: 16px;
+}

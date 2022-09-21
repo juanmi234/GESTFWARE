@@ -49,6 +49,9 @@
                 <b><label asp-for="deportista.FechaNacimiento" class="control-label">Fecha de Nacimiento</label></b>
                 <input asp-for="deportista.FechaNacimiento" class="form-control" />
                 <span asp-validation-for="deportista.FechaNacimiento" class="text-danger"></span>
+                @{/*@if (Model.deportista.CalcularEdad()<17){
+                    <span class="text-danger">Tienen que ser mayor de 17 años</span>
+                */}
             </div>
             <br>
             <div class="form-group">
@@ -76,7 +79,7 @@
             </div>
             <br>
             <div class="form-group">
-                <b><label asp-for="deportista.equipo.Nombre" class="control-label">Equipo</label></b>
+                <b><label asp-for="deportista.EquipoId" class="control-label">Equipo</label></b>
                 <select asp-for="deportista.EquipoId" class="form-control">
                     <option value="">--Seleccionar Equipo--</option>
                     @foreach (var equ in Model.lstEquipos){

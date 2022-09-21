@@ -1,15 +1,13 @@
 ﻿@page
-@model FrontEnd.Pages.CPatrocinador.CreateModel
+@model FrontEnd.Pages.CPatrocinador.EditModel
 @{
-    ViewData["Title"]="Adicionar Patrocinador";
+    ViewData["Title"]="Modificar Patrocinador";
 }
-
-<h2>Adicionar Patrocinador</h2>
+<h2>Modificar Patrocinador</h2>
 <h3 class="text-danger">@ViewData["Error"] </h3>
-<hr/>
 <div class="row">
     <div class="col-md-4">
-        <form method="post" asp-action="Create">
+        <form method="post" asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <b><label asp-for="patrocinador.Documento" class="control-label"></label></b>
@@ -60,7 +58,6 @@
                 <input type="submit" class="btn btn-success" value="Adicionar" />
                 <a asp-page="./Index" class="btn btn-info">Regresar</a>
             </div>
-
         </form>
     </div>
 </div>

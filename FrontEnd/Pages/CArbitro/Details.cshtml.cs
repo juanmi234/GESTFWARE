@@ -28,6 +28,7 @@ namespace FrontEnd.Pages.CArbitro
         public ActionResult OnGet(int id){
             arbitro = objArbitro.BuscarArbitro(id);
             if(arbitro==null){
+                //Esto no debería pasar
                 ViewData["Error"]="No se encontró el Arbitro";
                 return Page();
             }else{

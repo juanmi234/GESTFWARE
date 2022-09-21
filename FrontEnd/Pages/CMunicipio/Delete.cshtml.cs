@@ -9,7 +9,7 @@ namespace FrontEnd.Pages.CMunicipio
 
         //Atributos
         private readonly IRMunicipio objMunicipio;
-
+        [BindProperty]
         public Municipio municipio {get;set;}
 
         //Metodos

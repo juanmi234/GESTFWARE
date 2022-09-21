@@ -10,6 +10,7 @@ namespace FrontEnd.Pages.CDeportista
         //Atributos
         private readonly IRDeportista objDeportista;
         private readonly IREquipo objEquipo;
+        [BindProperty]
         public Deportista deportista {get;set;}
         public Equipo equipo {get;set;}
         //Metodo Constructor

@@ -28,7 +28,7 @@ namespace FrontEnd.Pages.CMunicipio
             if(objMunicipio.ModificarMunicipio(municipio)){
                 return RedirectToPage("./Index");
             }else{
-                ViewData["Error"]="No fue posible editar el Municipio";
+                ViewData["Error"]="Ya hay un municipio con este mismo nombre";
                 return Page();
             }
             return Page();

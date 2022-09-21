@@ -76,14 +76,5 @@ namespace Dominio{
         public int EquipoId {get;set;}//Relacion con tabla Equipo
         public Equipo equipo {get;set;}//Propiedad navigacional
 
-        //Metodos
-        //Calcular edad
-        public int CalcularEdad(){
-            DateTime fechaActual = DateTime.Today;
-            int yearActual= fechaActual.Year;
-            int anios = yearActual-this.FechaNacimiento.Year;
-            return anios;
-        }
-
     }
 }

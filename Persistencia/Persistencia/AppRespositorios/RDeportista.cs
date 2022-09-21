@@ -16,7 +16,7 @@ namespace Persistencia{
             this.appContext=_appContext;
         }
         public bool CrearDeportista(Deportista depor){
-            if(depor.CalcularEdad()>16){
+            if(CalcularEdad(depor)>=12){
                 try{
                     this.appContext.Deportistas.Add(depor);
                     this.appContext.SaveChanges();
@@ -101,6 +101,13 @@ namespace Persistencia{
                 return true;
             }
             return false;
+        }
+        //Calcular edad
+        private int CalcularEdad(Deportista depor){
+            DateTime fechaActual = DateTime.Today;
+            int yearActual= fechaActual.Year;
+            int anios = yearActual - depor.FechaNacimiento.Year;
+            return anios;
         }
     }
 }

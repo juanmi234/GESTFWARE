@@ -16,7 +16,7 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Entrenador
         public bool CrearEntrenador(Entrenador trenador){
-            if(!Existencia(trenador)){
+            if(trenador.EquipoId!=null){
                 try{
                     this.appContext.Entrenadores.Add(trenador);
                     this.appContext.SaveChanges();

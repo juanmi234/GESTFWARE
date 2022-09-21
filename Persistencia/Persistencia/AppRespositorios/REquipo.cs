@@ -18,7 +18,7 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Equipo
         public bool CrearEquipo(Equipo equ){
-            if(!Existencia(equ)){
+            if(equ.Tecnico!=null){
                 try{
                     this.appContext.Equipos.Add(equ);
                     this.appContext.SaveChanges();

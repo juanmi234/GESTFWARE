@@ -26,7 +26,7 @@ namespace Dominio{
         public string Tipo {get;set;}
         
         [Required(ErrorMessage="El escenario debe pertenecer a una Unidad Deportiva")]
-        public int UnidadDeportivaId {get;set;}
+        public int UnidadDeportivaId {get;set;} 
         public UnidadDeportiva UnidadDepor;
     }
 }

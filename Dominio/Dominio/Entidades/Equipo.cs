@@ -19,8 +19,7 @@ namespace Dominio{
         [MinLength(3, ErrorMessage="El campo {0} debe tener minimo {1} caracteres")]
         public string Deporte {get;set;}
 
-        [Required(ErrorMessage="Un equipo debe tener un técnico")]
-        public Entrenador Tecnico {get;set;} 
+        public Entrenador? Tecnico {get;set;} 
         //Este no aparece en la base de datos mega F
 
         //Requerimientos campo Jugadores

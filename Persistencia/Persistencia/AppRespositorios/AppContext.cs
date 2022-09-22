@@ -12,6 +12,7 @@ namespace Persistencia{
             modelBuilder.Entity<Municipio>().HasIndex(m=>m.Nombre).IsUnique();
             modelBuilder.Entity<Arbitro>().HasIndex(ar=>ar.Documento).IsUnique();
             modelBuilder.Entity<ColegioInstruccion>().HasIndex(c=>c.Nit).IsUnique();
+            modelBuilder.Entity<Deportista>().HasIndex(de=>de.Documento).IsUnique();
             //modelBuilder.Entity<Torneo>().HasIndex(tor=>tor.Nombre).IsUnique();
 
             modelBuilder.Entity<Patrocinador>()

@@ -16,17 +16,15 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Patrocinador
         public bool CrearPatrocinador(Patrocinador pat){
-            if(!Existencia(pat)){
-                try
-                {
-                    this.appContext.Patrocinadores.Add(pat);
-                    this.appContext.SaveChanges();
-                    return true;
-                }
-                catch (System.Exception)
-                {
-                    return false;
-                }
+            try
+            {
+                this.appContext.Patrocinadores.Add(pat);
+                this.appContext.SaveChanges();
+                return true;
+            }
+            catch (System.Exception)
+            {
+                return false;
             }
             return false;
         }
@@ -49,10 +47,8 @@ namespace Persistencia{
                     patrocinador.Telefono=pat.Telefono;
                     patrocinador.Ciudad=pat.Ciudad;
                     patrocinador.Personeria=pat.Personeria;
-                    //if(!Existencia(patrocinador)){
-                        this.appContext.SaveChanges();
-                        return true;//Tengo mis dudas y esque como el documento si es el mismo, va a entrar
-                    //}
+                    this.appContext.SaveChanges();
+                    return true;//Tengo mis dudas y esque como el documento si es el mismo, va a entrar
                 }
                 catch (System.Exception)
                 {
@@ -70,6 +66,7 @@ namespace Persistencia{
                 {
                     this.appContext.Patrocinadores.Remove(patrocinador);
                     this.appContext.SaveChanges();
+                    return true;
                 }
                 catch (System.Exception)
                 {

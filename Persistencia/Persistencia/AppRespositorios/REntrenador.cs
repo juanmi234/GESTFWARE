@@ -16,15 +16,13 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Entrenador
         public bool CrearEntrenador(Entrenador trenador){
-            if(trenador.EquipoId!=null){
-                try{
-                    this.appContext.Entrenadores.Add(trenador);
-                    this.appContext.SaveChanges();
-                    return true;
-                }catch(System.Exception){
-                    //Ya existe
-                    return false;
-                }
+            try{
+                this.appContext.Entrenadores.Add(trenador);
+                this.appContext.SaveChanges();
+                return true;
+            }catch(System.Exception){
+                //Ya existe
+                return false;
             }
             return false;
         }

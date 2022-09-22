@@ -17,19 +17,16 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Escenario
         public bool CrearEscenario(Escenario esc){
-            if(!Existencia(esc)){
-                try
-                {
-                    this.appContext.Escenarios.Add(esc);
-                    this.appContext.SaveChanges();
-                    return true;
-                }
-                catch (System.Exception)
-                {
-                    return false;
-                }
+            try
+            {
+                this.appContext.Escenarios.Add(esc);
+                this.appContext.SaveChanges();
+                return true;
             }
-            return false;
+            catch (System.Exception)
+            {
+                return false;
+            }
         }
 
         //Buscar Escenario

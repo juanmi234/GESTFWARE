@@ -19,17 +19,15 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Unidad Deportiva
         public bool CrearUniDeportiva(UnidadDeportiva unidad){
-            if(!Existencia(unidad)){
-                try
-                {
-                    this.appContext.UnidadesDeportivas.Add(unidad);
-                    this.appContext.SaveChanges();
-                    return true;
-                }
-                catch (System.Exception)
-                {
-                    return false;
-                }
+            try
+            {
+                this.appContext.UnidadesDeportivas.Add(unidad);
+                this.appContext.SaveChanges();
+                return true;
+            }
+            catch (System.Exception)
+            {
+                return false;
             }
             return false;
         }

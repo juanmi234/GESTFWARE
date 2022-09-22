@@ -18,13 +18,12 @@ namespace Persistencia{
         //Metodos CRUD
         //Crear Equipo
         public bool CrearEquipo(Equipo equ){
-            if(equ.Tecnico!=null){
-                try{
-                    this.appContext.Equipos.Add(equ);
-                    this.appContext.SaveChanges();
-                }catch(System.Exception){
-                    return false;
-                }
+            try{
+                this.appContext.Equipos.Add(equ);
+                this.appContext.SaveChanges();
+                return true;
+            }catch(System.Exception){
+                return false;
             }
             return false;
         }
@@ -46,10 +45,8 @@ namespace Persistencia{
                     equipo.Jugadores=equ.Jugadores;
                     equipo.PatrocinadorId=equ.PatrocinadorId;
                     //equipo.Deportistas=equ.Deportistas;
-                    if(!Existencia(equipo)){
-                        this.appContext.SaveChanges();
-                        return true;  
-                    }
+                    this.appContext.SaveChanges();
+                    return true;  
                 }
                 catch (System.Exception)
                 {

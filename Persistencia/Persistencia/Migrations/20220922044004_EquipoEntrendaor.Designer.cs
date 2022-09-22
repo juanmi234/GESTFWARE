@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistencia;
 
@@ -11,9 +12,10 @@ using Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20220922044004_EquipoEntrendaor")]
+    partial class EquipoEntrendaor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,7 +224,7 @@ namespace Persistencia.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int>("EquipoId")
+                    b.Property<int?>("EquipoId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombres")
@@ -233,7 +235,8 @@ namespace Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("EquipoId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[EquipoId] IS NOT NULL");
 
                     b.ToTable("Entrenadores");
                 });
@@ -506,9 +509,7 @@ namespace Persistencia.Migrations
                 {
                     b.HasOne("Dominio.Equipo", "equipo")
                         .WithOne("Tecnico")
-                        .HasForeignKey("Dominio.Entrenador", "EquipoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Dominio.Entrenador", "EquipoId");
 
                     b.Navigation("equipo");
                 });

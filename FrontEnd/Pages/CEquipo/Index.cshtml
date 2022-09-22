@@ -22,7 +22,11 @@
             @foreach (var equ in Model.lstEquipos){
                 <tr>
                     <td>@equ.Nombre</td>
-                    <td>@equ.Tecnico.Nombres </td>
+                    @if(equ.Tecnico!=null){
+                        <td>@equ.Tecnico.Nombres </td>
+                    }else{
+                        <td>SIN TECNICO</td>
+                    }
                     <td><select class="form-control">
                         <option selected>--Jugadores--</option>
                         @foreach (var depor in equ.Deportistas){

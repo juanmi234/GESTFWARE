@@ -9,6 +9,9 @@
     <div class="col-md-4">
         <form method="post" asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <input asp-for="patrocinador.Id" hidden />
+            </div>
             <div class="form-group">
                 <b><label asp-for="patrocinador.Documento" class="control-label"></label></b>
                 <input asp-for="patrocinador.Documento" class="form-control" placeholder="12322463465" />
@@ -18,6 +21,7 @@
             <div class="form-group">
                 <b><label asp-for="patrocinador.Nombres" class="control-label"></label></b>
                 <input asp-for="patrocinador.Nombres" class="form-control" placeholder="Gatorade" />
+                <span asp-validation-for="patrocinador.Nombres" class="text-danger"></span>
             </div>
             <br>
             <div class="form-group">
@@ -29,7 +33,7 @@
             <div class="form-group">
                 <b><label asp-for="patrocinador.Direccion" class="control-label"></label></b>
                 <input asp-for="patrocinador.Direccion" class="form-control" placeholder="Cl 7 Oe. #31-08" />
-                <span asp-validation-for="patrocinador.Deporte" class="text-danger"></span>
+                <span asp-validation-for="patrocinador.Direccion" class="text-danger"></span>
             </div>
             <br>
             <div class="form-group">
@@ -55,7 +59,7 @@
             </div>
             <br>
             <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Adicionar" />
+                <input type="submit" class="btn btn-success" value="Editar" />
                 <a asp-page="./Index" class="btn btn-info">Regresar</a>
             </div>
         </form>

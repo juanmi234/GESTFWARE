@@ -26,6 +26,9 @@ namespace FrontEnd.Pages.CPatrocinador
             return Page();
         }
         public ActionResult OnPost(){
+            if(!ModelState.IsValid){
+                return Page();
+            }
             if(objPatrocinador.ModificarPatrocinador(patrocinador)){
                 return RedirectToPage("./Index");
             }else{

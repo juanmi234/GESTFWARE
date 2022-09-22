@@ -7,6 +7,7 @@
 <h2>Adicionar Patrocinador</h2>
 <h3 class="text-danger">@ViewData["Error"] </h3>
 <hr/>
+
 <div class="row">
     <div class="col-md-4">
         <form method="post" asp-action="Create">
@@ -20,6 +21,7 @@
             <div class="form-group">
                 <b><label asp-for="patrocinador.Nombres" class="control-label"></label></b>
                 <input asp-for="patrocinador.Nombres" class="form-control" placeholder="Gatorade" />
+                <span asp-validation-for="patrocinador.Nombres" class="text-danger"></span>
             </div>
             <br>
             <div class="form-group">
@@ -31,7 +33,7 @@
             <div class="form-group">
                 <b><label asp-for="patrocinador.Direccion" class="control-label"></label></b>
                 <input asp-for="patrocinador.Direccion" class="form-control" placeholder="Cl 7 Oe. #31-08" />
-                <span asp-validation-for="patrocinador.Deporte" class="text-danger"></span>
+                <span asp-validation-for="patrocinador.Direccion" class="text-danger"></span>
             </div>
             <br>
             <div class="form-group">

@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
@@ -6,9 +7,8 @@ using Persistencia;
 
 namespace FrontEnd.Pages.CEquipo
 {
-    public class CreateModel : PageModel
+    public class EditModel : PageModel
     {
-        //Atributos
         private readonly IREquipo objEquipo;
         private readonly IREntrenador objEntrenador;
         private readonly IRPatrocinador objPatrocinador;
@@ -16,12 +16,17 @@ namespace FrontEnd.Pages.CEquipo
         public Equipo equipo {get;set;}
         public IEnumerable<Patrocinador> lstPatrocinadores {get;set;}
         //Metodo Constructor por defecto
-        public CreateModel(IREquipo _objEquipo,IRPatrocinador _objPatrocinador){
+        public EditModel(IREquipo _objEquipo,IRPatrocinador _objPatrocinador){
             this.objEquipo = _objEquipo;
             this.objPatrocinador = _objPatrocinador;
         }
-        public ActionResult OnGet(){
+        public ActionResult OnGet(int id){
             lstPatrocinadores=objPatrocinador.ListarPatrocinadorIE();
+            equipo = objEquipo.BuscarEquipo(id);
+            if(equipo==null){
+                ViewData["Error"]="No se encontró el equipo";
+                return Page();
+            }
             return Page();
         }
         public ActionResult OnPost(){
@@ -29,7 +34,7 @@ namespace FrontEnd.Pages.CEquipo
                 lstPatrocinadores=objPatrocinador.ListarPatrocinadorIE();
                 return Page();
             }
-            if(objEquipo.CrearEquipo(equipo)){
+            if(objEquipo.ModificarEquipo(equipo)){
                 return RedirectToPage("./Index");
             }else{
                 lstPatrocinadores=objPatrocinador.ListarPatrocinadorIE();

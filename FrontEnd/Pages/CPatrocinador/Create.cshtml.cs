@@ -23,7 +23,7 @@ namespace FrontEnd.Pages.CPatrocinador
                 return Page();
             }
             if(objPatrocinador.CrearPatrocinador(patrocinador)){
-                return RedirectToPage("./Index");
+                return RedirectToPage("Index");
             }else{
                 ViewData["Error"]="Ya existe un Patrocinador con ese documento";
                 return Page();
